@@ -36,14 +36,17 @@ const Certificates = () => {
   return (
     <section
       id="certificates"
-      className="relative py-24 bg-[#0f172a] text-white overflow-hidden"
+      className="relative py-16 sm:py-24 bg-[#0f172a] text-white overflow-hidden"
     >
       {/* 🌠 Bintang di background */}
       <TwinklingStars />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <h2 className="text-4xl font-bold text-center mb-12">Skill Certificates</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12">
+          Skill Certificates
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {certificates.map((cert, i) => (
             <motion.div
               key={i}
@@ -59,12 +62,18 @@ const Certificates = () => {
               <img
                 src={cert.image}
                 alt={cert.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-40 sm:h-48 object-cover"
               />
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-white">{cert.title}</h3>
-                <p className="text-sm text-gray-300">{cert.issuer}</p>
-                <p className="text-xs text-gray-500">{cert.year}</p>
+                <h3 className="text-base sm:text-lg font-semibold text-white">
+                  {cert.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-300">
+                  {cert.issuer}
+                </p>
+                <p className="text-[10px] sm:text-xs text-gray-500">
+                  {cert.year}
+                </p>
               </div>
             </motion.div>
           ))}

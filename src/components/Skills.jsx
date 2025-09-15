@@ -8,6 +8,7 @@ import {
 } from 'react-icons/si';
 import TwinklingStars from './TwinklingStars'; // ✨ import bintang
 
+// Data skill
 const skills = [
   { icon: <FaHtml5 className="text-[#E34F26]" />, name: 'HTML5' },
   { icon: <FaCss3Alt className="text-[#1572B6]" />, name: 'CSS3' },
@@ -21,6 +22,7 @@ const skills = [
   { icon: <FaGitAlt className="text-[#F05032]" />, name: 'Git' },
 ];
 
+// Animasi item skill
 const skillVariants = {
   hidden: { y: 20, opacity: 0 },
   visible: { y: 0, opacity: 1 }
@@ -29,7 +31,7 @@ const skillVariants = {
 const Skills = () => {
   return (
     <section id="skills" className="relative py-24 bg-[#0f172a] overflow-hidden">
-      {/* Bintang sebagai background */}
+      {/* ✨ Bintang sebagai background */}
       <TwinklingStars />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -38,7 +40,7 @@ const Skills = () => {
         </h2>
 
         <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -47,13 +49,13 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center p-4 bg-white/10 backdrop-blur-md rounded-lg shadow-md border border-white/10"
+              className="flex flex-col items-center p-4 bg-white/10 backdrop-blur-md rounded-lg shadow-md border border-white/10 hover:shadow-green-500/20 transition"
               variants={skillVariants}
               whileHover={{ scale: 1.1, y: -10 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              transition={{ type: 'spring', stiffness: 300 }}
             >
-              <div className="text-5xl mb-3">{skill.icon}</div>
-              <p className="text-gray-200 font-semibold">{skill.name}</p>
+              <div className="text-4xl sm:text-5xl mb-3">{skill.icon}</div>
+              <p className="text-gray-200 font-semibold text-sm sm:text-base">{skill.name}</p>
             </motion.div>
           ))}
         </motion.div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+// Posisi bintang manual + random tambahan
 const starPositions = [
   { top: '10%', left: '15%' },
   { top: '20%', left: '70%' },
@@ -12,21 +13,34 @@ const starPositions = [
   { top: '30%', left: '90%' },
 ];
 
+// Biar lebih ramai, generate bintang random juga
+const randomStars = Array.from({ length: 15 }, () => ({
+  top: `${Math.random() * 100}%`,
+  left: `${Math.random() * 100}%`,
+}));
+
 const TwinklingStars = () => {
+  const stars = [...starPositions, ...randomStars];
+
   return (
     <>
-      {starPositions.map((pos, index) => (
+      {stars.map((pos, index) => (
         <motion.div
           key={index}
-          className="w-[4px] h-[4px] md:w-[6px] md:h-[6px] rounded-full bg-white absolute"
-          style={{ top: pos.top, left: pos.left }}
-          animate={{ opacity: [0.2, 1, 0.2] }}
+          className="absolute rounded-full bg-white"
+          style={{
+            top: pos.top,
+            left: pos.left,
+            width: `${Math.random() > 0.5 ? 4 : 2}px`,
+            height: `${Math.random() > 0.5 ? 4 : 2}px`,
+          }}
+          animate={{ opacity: [0.1, 1, 0.1] }}
           transition={{
-            duration: 2 + Math.random() * 2, // 2–4 detik
+            duration: 1.5 + Math.random() * 2.5, // 1.5–4s
             repeat: Infinity,
             repeatType: 'loop',
             ease: 'easeInOut',
-            delay: Math.random(),
+            delay: Math.random() * 2,
           }}
         />
       ))}

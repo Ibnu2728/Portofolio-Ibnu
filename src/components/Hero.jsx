@@ -8,13 +8,12 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0f172a] px-6 py-32"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0f172a] px-4 sm:px-6 py-20 sm:py-32"
     >
       {/* ✨ Bintang berkedip */}
       <TwinklingStars />
 
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
-        
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center relative z-10">
         {/* Kiri - Teks */}
         <motion.div
           initial="hidden"
@@ -28,7 +27,7 @@ const Hero = () => {
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight"
+            className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight"
           >
             Hello, I'm Ibnu<br />Syuhada Suffera
           </motion.h1>
@@ -38,7 +37,7 @@ const Hero = () => {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
-            className="text-2xl md:text-4xl text-indigo-300 font-semibold mb-6"
+            className="text-xl sm:text-2xl md:text-4xl text-indigo-300 font-semibold mb-6"
           >
             <TypeAnimation
               sequence={[
@@ -63,19 +62,17 @@ const Hero = () => {
             }}
             className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-10"
           >
-            {/* Tombol Download CV */}
             <a
               href="/Cv.pdf"
               download="CV_IbnuSyuhadaSuffera.pdf"
-              className="inline-block bg-indigo-500 text-white text-lg font-bold py-3 px-10 rounded-full hover:bg-indigo-600 transition duration-300 shadow-lg"
+              className="w-full sm:w-auto text-center bg-indigo-500 text-white text-lg font-bold py-3 px-10 rounded-full hover:bg-indigo-600 transition duration-300 shadow-lg"
             >
               Download CV
             </a>
 
-            {/* Tombol My Projects */}
             <a
               href="#projects"
-              className="inline-block bg-indigo-500 text-white text-lg font-bold py-3 px-10 rounded-full hover:bg-indigo-600 transition duration-300 shadow-lg"
+              className="w-full sm:w-auto text-center bg-indigo-500 text-white text-lg font-bold py-3 px-10 rounded-full hover:bg-indigo-600 transition duration-300 shadow-lg"
             >
               My Projects
             </a>
@@ -84,12 +81,12 @@ const Hero = () => {
 
         {/* Kanan - Ikon Astronot + Roket */}
         <motion.div
-          className="flex justify-center md:justify-end md:pr-14 gap-10 relative"
+          className="flex justify-center md:justify-end md:pr-14 gap-6 sm:gap-10 relative"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ type: 'spring', stiffness: 260, damping: 20 }}
         >
-          {/* Astronot Melayang + Rotasi */}
+          {/* Astronot */}
           <motion.div
             animate={{
               y: [0, -30, 0, 30, 0],
@@ -105,10 +102,10 @@ const Hero = () => {
             whileHover={{ scale: 1.1 }}
             className="transition duration-300"
           >
-            <FaUserAstronaut className="text-indigo-300 text-[170px] md:text-[230px] drop-shadow-xl" />
+            <FaUserAstronaut className="text-indigo-300 text-[120px] sm:text-[170px] md:text-[230px] drop-shadow-xl" />
           </motion.div>
 
-          {/* Roket Melayang & Terbang Saat Hover */}
+          {/* Roket */}
           <motion.div
             initial={{ y: 0 }}
             animate={{
@@ -128,7 +125,7 @@ const Hero = () => {
             }}
             className="transition duration-300"
           >
-            <FaRocket className="text-indigo-400 text-[120px] md:text-[160px] drop-shadow-lg" />
+            <FaRocket className="text-indigo-400 text-[80px] sm:text-[120px] md:text-[160px] drop-shadow-lg" />
           </motion.div>
         </motion.div>
       </div>

@@ -9,13 +9,16 @@ const iconVariants = {
     opacity: 1,
     scale: 1,
     y: 0,
-    transition: { delay: i * 0.2, duration: 0.5, ease: 'easeOut' }
+    transition: { delay: i * 0.2, duration: 0.5, ease: 'easeOut' },
   }),
 };
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-[#0f172a] text-white relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-16 sm:py-24 bg-[#0f172a] text-white relative overflow-hidden"
+    >
       {/* Bintang sebagai background */}
       <TwinklingStars />
 
@@ -24,23 +27,26 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
         viewport={{ once: true }}
-        className="container mx-auto px-6 text-center relative z-10"
+        className="container mx-auto px-4 sm:px-6 text-center relative z-10"
       >
-        <h2 className="text-4xl font-bold text-white mb-6">Let's Connect</h2>
-        <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-          I'm always open to new opportunities and happy to chat. Feel free to contact me via email or social media.
+        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">
+          Let's Connect
+        </h2>
+        <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          I'm always open to new opportunities and happy to chat. Feel free to
+          contact me via email or social media.
         </p>
 
-        <motion.a 
-          href="mailto:ibnusyuhadasuffera@gmail.com" 
+        <motion.a
+          href="mailto:ibnusyuhadasuffera@gmail.com"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="inline-block bg-indigo-500 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-400 transition-all duration-300 mb-12"
+          className="inline-block bg-indigo-500 text-white font-bold py-3 px-6 sm:px-8 rounded-full hover:bg-indigo-400 transition-all duration-300 mb-10 sm:mb-12"
         >
           Send Message
         </motion.a>
 
-        <div className="flex justify-center space-x-8">
+        <div className="flex justify-center space-x-6 sm:space-x-8">
           {[FaGithub, FaLinkedin, FaEnvelope].map((Icon, i) => (
             <motion.a
               key={i}
@@ -58,7 +64,7 @@ const Contact = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-3xl text-gray-400 hover:text-indigo-400 transition duration-300"
+              className="text-2xl sm:text-3xl text-gray-400 hover:text-indigo-400 transition duration-300"
               whileHover={{ scale: 1.2 }}
             >
               <Icon />

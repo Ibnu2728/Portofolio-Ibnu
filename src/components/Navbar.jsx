@@ -23,7 +23,7 @@ const Navbar = () => {
   const handleNavClick = () => setMenuOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm px-4 py-3">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#0f172a]/80 backdrop-blur-sm px-4 py-3 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <Link
           to="hero"
@@ -52,17 +52,17 @@ const Navbar = () => {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation"
         >
-          <div className="space-y-1">
-            <span className="block w-6 h-0.5 bg-indigo-300"></span>
-            <span className="block w-6 h-0.5 bg-indigo-300"></span>
-            <span className="block w-6 h-0.5 bg-indigo-300"></span>
+          <div className="space-y-1.5">
+            <span className="block w-6 h-0.5 bg-indigo-300 rounded"></span>
+            <span className="block w-6 h-0.5 bg-indigo-300 rounded"></span>
+            <span className="block w-6 h-0.5 bg-indigo-300 rounded"></span>
           </div>
         </button>
       </div>
 
       {/* Mobile Nav */}
       {menuOpen && (
-        <ul className="md:hidden mt-4 space-y-4 text-center bg-[#0f172a]/90 p-4 rounded-lg shadow-lg">
+        <ul className="md:hidden mt-3 space-y-4 text-center bg-[#0f172a]/95 p-5 rounded-lg shadow-lg transition-all duration-300">
           <li><NavLink to="hero" onClick={handleNavClick}>Home</NavLink></li>
           <li><NavLink to="about" onClick={handleNavClick}>About</NavLink></li>
           <li><NavLink to="education" onClick={handleNavClick}>Education</NavLink></li>

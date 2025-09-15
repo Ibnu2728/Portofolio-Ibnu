@@ -8,11 +8,11 @@ const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
       viewport={{ once: true }}
-      className="py-4 bg-white/5 text-center text-sm text-gray-400"
+      className="py-3 sm:py-4 bg-white/5 text-center text-xs sm:text-sm text-gray-400"
     >
-      <div className="container mx-auto px-4">
-        &copy; {new Date().getFullYear()} Ibnu Syuhada Suffera — 
-        <span className="text-gray-500"> Thank you for visiting.</span>
+      <div className="container mx-auto px-3 sm:px-4">
+        &copy; {new Date().getFullYear()} Ibnu Syuhada Suffera —{' '}
+        <span className="text-gray-500">Thank you for visiting.</span>
       </div>
     </motion.footer>
   );
