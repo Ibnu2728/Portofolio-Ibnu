@@ -49,7 +49,7 @@ const About = () => {
             <p>
               Hello! I’m a{' '}
               <span className="text-indigo-300 font-semibold">
-                Informatics Engineering student (3rd semester)
+                Informatics Engineering student (4th semester)
               </span>{' '}
               focused on developing modern, responsive, and interactive web
               interfaces.

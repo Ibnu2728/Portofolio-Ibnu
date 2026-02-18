@@ -4,11 +4,18 @@ import { FaGraduationCap, FaUsers, FaSchool } from 'react-icons/fa';
 import TwinklingStars from './TwinklingStars'; // ✨ Import bintang
 
 const timeline = [
+  
   {
-    icon: <FaSchool />,
-    title: 'SMKS Pelita Ciampea 2',
-    subtitle: 'Computer and Network Engineering',
-    year: '2021 - 2024',
+    icon: <FaUsers />,
+    title: 'Himpunan Mahasiswa Teknik Informatika (HIMTIF)',
+    subtitle: 'Department of Riset Teknologi ',
+    year: '2026 - Present',
+  },
+  {
+    icon: <FaUsers />,
+    title: 'Informatics Study Club (ISC)',
+    subtitle: 'Web Development Division',
+    year: '2025 - Present',
   },
   {
     icon: <FaGraduationCap />,
@@ -17,10 +24,10 @@ const timeline = [
     year: '2024 - Present',
   },
   {
-    icon: <FaUsers />,
-    title: 'Informatics Study Club',
-    subtitle: 'Active Member',
-    year: '2025 - Present',
+    icon: <FaSchool />,
+    title: 'SMKS Pelita Ciampea 2',
+    subtitle: 'Computer and Network Engineering',
+    year: '2021 - 2024',
   },
 ];
 
