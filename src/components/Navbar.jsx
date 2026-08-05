@@ -35,7 +35,6 @@ const Navbar = () => {
           Ibnu Syuhada Suffera
         </Link>
 
-        {/* Desktop Nav */}
         <ul className="hidden md:flex space-x-6">
           <li><NavLink to="hero">Home</NavLink></li>
           <li><NavLink to="about">About</NavLink></li>
@@ -46,7 +45,6 @@ const Navbar = () => {
           <li><NavLink to="contact">Contacts</NavLink></li>
         </ul>
 
-        {/* Hamburger Button */}
         <button
           className="md:hidden focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -60,7 +58,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Nav */}
       {menuOpen && (
         <ul className="md:hidden mt-3 space-y-4 text-center bg-[#0f172a]/95 p-5 rounded-lg shadow-lg transition-all duration-300">
           <li><NavLink to="hero" onClick={handleNavClick}>Home</NavLink></li>

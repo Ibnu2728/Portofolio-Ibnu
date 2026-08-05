@@ -38,7 +38,6 @@ const Certificates = () => {
       id="certificates"
       className="relative py-16 sm:py-24 bg-[#0f172a] text-white overflow-hidden"
     >
-      {/* 🌠 Bintang di background */}
       <TwinklingStars />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

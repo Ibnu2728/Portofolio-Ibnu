@@ -19,7 +19,6 @@ const Contact = () => {
       id="contact"
       className="py-16 sm:py-24 bg-[#0f172a] text-white relative overflow-hidden"
     >
-      {/* Bintang sebagai background */}
       <TwinklingStars />
 
       <motion.div
@@ -54,7 +53,7 @@ const Contact = () => {
                 i === 0
                   ? 'https://github.com/Ibnu2728'
                   : i === 1
-                  ? 'https://www.linkedin.com/in/ibnu-syuhada-suffera-275281372'
+                  ? 'https://www.linkedin.com/in/ibnusyhd'
                   : 'mailto:ibnusyuhadasuffera@gmail.com'
               }
               target="_blank"

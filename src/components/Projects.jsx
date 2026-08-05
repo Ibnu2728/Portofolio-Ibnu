@@ -28,6 +28,22 @@ const projectData = [
     link: '#',
     repo: 'https://github.com/Ibnu2728/Portofolio-Ibnu.git',
   },
+  {
+    title: 'Website Himtif Unpam',
+    description: 'PROKER RISTEK',
+    image: '/web_himtif.png',
+    tags: ['React', 'JavaScript'],
+    link: 'https://himtifunpam.com/',
+    repo: 'private',
+  },
+    {
+    title: 'Website Perpustakaan',
+    description: 'TUGAS AKHIR ALGO 2',
+    image: '/project.png',
+    tags: ['PHP', 'JavaScript','Boostrap','Laragon','MySQL'],
+    link: '#',
+    repo: 'private',
+  },
 ];
 
 const cardVariants = {
@@ -113,7 +129,6 @@ const Projects = () => {
         </motion.div>
       </div>
 
-      {/* Modal */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div

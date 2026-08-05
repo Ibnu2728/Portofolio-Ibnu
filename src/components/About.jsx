@@ -8,7 +8,6 @@ const About = () => {
       id="about"
       className="relative py-16 sm:py-24 bg-[#0f172a] text-white overflow-hidden"
     >
-      {/* ✨ Background Bintang */}
       <TwinklingStars />
 
       <motion.div
@@ -23,7 +22,6 @@ const About = () => {
         </h2>
 
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-6 sm:p-8 border border-white/10">
-          {/* Foto Profil */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -38,7 +36,6 @@ const About = () => {
             />
           </motion.div>
 
-          {/* Deskripsi */}
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -49,7 +46,7 @@ const About = () => {
             <p>
               Hello! I’m a{' '}
               <span className="text-indigo-300 font-semibold">
-                Informatics Engineering student (4th semester)
+                Informatics Engineering student (5th semester)
               </span>{' '}
               focused on developing modern, responsive, and interactive web
               interfaces.

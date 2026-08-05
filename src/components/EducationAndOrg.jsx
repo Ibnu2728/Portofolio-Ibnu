@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaUsers, FaSchool } from 'react-icons/fa';
-import TwinklingStars from './TwinklingStars'; // ✨ Import bintang
+import TwinklingStars from './TwinklingStars'; 
 
 const timeline = [
   
@@ -37,7 +37,6 @@ const EducationAndOrg = () => {
       id="education"
       className="relative py-16 sm:py-24 bg-[#0f172a] text-white overflow-hidden"
     >
-      {/* ✨ Background bintang */}
       <TwinklingStars />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">

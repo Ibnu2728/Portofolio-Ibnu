@@ -10,11 +10,9 @@ const Hero = () => {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0f172a] px-4 sm:px-6 py-20 sm:py-32"
     >
-      {/* ✨ Bintang berkedip */}
       <TwinklingStars />
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center relative z-10">
-        {/* Kiri - Teks */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -54,7 +52,6 @@ const Hero = () => {
             />
           </motion.div>
 
-          {/* Tombol Download CV & My Projects */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 20 },
@@ -79,14 +76,12 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        {/* Kanan - Ikon Astronot + Roket */}
         <motion.div
           className="flex justify-center md:justify-end md:pr-14 gap-6 sm:gap-10 relative"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ type: 'spring', stiffness: 260, damping: 20 }}
         >
-          {/* Astronot */}
           <motion.div
             animate={{
               y: [0, -30, 0, 30, 0],
@@ -105,7 +100,6 @@ const Hero = () => {
             <FaUserAstronaut className="text-indigo-300 text-[120px] sm:text-[170px] md:text-[230px] drop-shadow-xl" />
           </motion.div>
 
-          {/* Roket */}
           <motion.div
             initial={{ y: 0 }}
             animate={{
